@@ -3,10 +3,10 @@ describe('Bubble Sort', function(){
     expect( bubbleSort([]) ).toEqual( [] );
   });
   it('handles a single-item array', function(){
-    expect( bubbleSort([1])).toEqual( [3] );
+    expect( bubbleSort([1])).toEqual( [1] );
   });
   it('handles a single-item array', function(){
-    expect( bubbleSort( [5,3,2,4,1] )).toEqual( [1,2,3,4,5] );
+    expect( bubbleSort( [5,4,3,2,1] )).toEqual( [1,2,3,4,5] );
   });
 });
 
