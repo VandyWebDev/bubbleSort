@@ -1,17 +1,14 @@
 function bubbleSort(array) {
-  for(let i = 0; i < array.length; i++){
-    
-    for(let j = i + 1; j < array.length; j++){
-      if(array[j] < array[j-1]){
-        let temp = array[j];
-        array[j] = array[j-1];
-        array[j-1] = temp;
-        
-      }
-      console.log(array)
-    }
-  }
-  return array;
+	let arrLength = array.length - 1;
+	let midPoint = Math.round(arrLength / 2);
+	for (let j = arrLength; j >= midPoint; j--) {
+		for (let i = 0; i < j; i++) {
+			if (array[i] > array[i + 1]) {
+				let temp = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = temp;
+			}
+		}
+	}
+	return array;
 }
-
-bubbleSort([5,4,3,2,1]);
